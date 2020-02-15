@@ -49,8 +49,8 @@ const TODOS_LS = "toDos"; //locarstorage 'key' value
         const loadedToDos = localStorage.getItem(TODOS_LS); //The getItem() method of the Storage interface, when passed a key name, will return that key's value, or null if the key does not exist, in the given Storage object.
         if (loadedToDos !== null) {
             const parsedToDos = JSON.parse(loadedToDos); // String to Object with parse
-            parsedToDos.forEach(function(toDo) { //'forEach' order do something(function) for each one 
-                paintToDo(toDo.text);
+            parsedToDos.forEach(function(list) { //'forEach' order do something(function) for each one 
+                paintToDo(list.text);
             });
         }
     }
